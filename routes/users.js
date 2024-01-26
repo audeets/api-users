@@ -4,29 +4,19 @@ const mongoose = require("../models/init");
 const User = mongoose.model("User");
 const router = express.Router();
 
-router
-  .route("/")
-  .get((req, res, next) => {
-    User.find()
-      .then((result) => {
-        return res.json(result);
-      })
-      .catch((error) => {
-        return next(error);
-      });
-  })
-  .post((req, res, next) => {
-    let user = new User();
-    // user.url = req.body.url;
-    // user.title = req.body.title;
-    user
-      .save()
-      .then(() => {
-        res.json(user);
-      })
-      .catch((error) => {
-        return next(error);
-      });
-  });
+function isLoggedIn(req, res, next) {
+  req.user ? next() : res.sendStatus(401);
+}
+
+router.get("/current", isLoggedIn, (req, res, next) => {
+  console.log(req.user);
+  User.findOne({ _id: req.user.id })
+    .then((result) => {
+      return res.json(result);
+    })
+    .catch((error) => {
+      return next(error);
+    });
+});
 
 module.exports = router;

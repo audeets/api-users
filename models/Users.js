@@ -1,26 +1,21 @@
-'use strict';
+"use strict";
 
 /**
  * Module dependencies
  */
 
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 // end module dependencies
 
-var UsersSchema = new mongoose.Schema({
-  // url: String,
-  // title: String,
-  // description: String,
-  // crawling: {
-  //   type: String,
-  //   enum: ['no_crawling', '1', '2', '3', 'all']
-  // },
-  // verified: Boolean,
-  // verificationToken: String,
-  // iconUrl: String,
-  // created: Date,
-  // modified: Date
-});
+var UsersSchema = new mongoose.Schema(
+  {
+    name: String,
+    googleId: String,
+    email: String,
+    photo: String,
+  },
+  { timestamps: true }
+);
 
-mongoose.model('User', UsersSchema);
+mongoose.model("User", UsersSchema);

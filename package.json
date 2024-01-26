@@ -9,15 +9,18 @@
     "test": "npm run coverage && npm run check-coverage",
     "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive \"./test/unit/**/*Spec.js\"",
     "check-coverage": "istanbul check-coverage --statement 85",
-    "start": "node --env-file=.env ./bin/www"
+    "start": "node --env-file=.env ./bin/www",
+    "start:dev": "nodemon --env-file=.env ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
-    "compression": "^1.6.2",
     "cookie-parser": "~1.4.3",
     "express": "~4.13.4",
+    "express-session": "^1.17.3",
     "mongodb": "^6.3.0",
-    "mongoose": "^8.0.2"
+    "mongoose": "^8.0.2",
+    "passport": "^0.7.0",
+    "passport-google-oauth2": "^0.2.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.23.4",
@@ -28,7 +31,8 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-prettier": "^5.1.2"
+    "eslint-plugin-prettier": "^5.1.2",
+    "nodemon": "^3.0.3"
   },
   "babel": {
     "presets": [

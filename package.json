@@ -5,12 +5,8 @@
   "author": "Benoit Quette",
   "main": "app.js",
   "scripts": {
-    "lint": "node ./node_modules/eslint/bin/eslint  --ext .js --ext .jsx .",
-    "test": "npm run coverage && npm run check-coverage",
-    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive \"./test/unit/**/*Spec.js\"",
-    "check-coverage": "istanbul check-coverage --statement 85",
     "start": "node --env-file=.env ./bin/www",
-    "start:dev": "nodemon --env-file=.env ./bin/www"
+    "start:dev": "node --watch --env-file=.env ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
@@ -31,8 +27,7 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-prettier": "^5.1.2",
-    "nodemon": "^3.0.3"
+    "eslint-plugin-prettier": "^5.1.2"
   },
   "babel": {
     "presets": [

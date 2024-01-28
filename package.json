@@ -6,7 +6,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node --env-file=.env ./bin/www",
-    "start:dev": "node --trace-deprecation --watch --env-file=.env ./bin/www"
+    "dev": "node --trace-deprecation --watch --env-file=.env ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.15.1",

@@ -13,8 +13,8 @@ router.get(
 router.get(
   "/google/callback",
   passport.authenticate("google", {
-    successRedirect: process.env.AUTH_SUCCESS_URL,
-    failureRedirect: process.env.URL,
+    successRedirect: `${process.env.CLIENT_BASE_URL}${process.env.AUTH_SUCCESS_URL}`,
+    failureRedirect: `${process.env.CLIENT_BASE_URL}${process.env.AUTH_FAILURE_URL}`,
   })
 );
 

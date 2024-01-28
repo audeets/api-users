@@ -7,11 +7,12 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const session = require("express-session");
+const MongoStore = require("connect-mongo");
 const passport = require("passport");
 const bodyParser = require("body-parser");
 const users = require("./routes/users");
 require("./auth/google");
-require("./auth/passport");
+require("audeets-api-commons/auth/passport");
 const auth = require("./routes/auth");
 
 // end module dependencies
@@ -37,6 +38,9 @@ app.use(
       maxAge: 1000 * 60 * 30,
       httpOnly: false,
     },
+    store: MongoStore.create({
+      mongoUrl: process.env.URL_MONGO,
+    }),
   })
 );
 app.use(passport.initialize());

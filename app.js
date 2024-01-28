@@ -11,6 +11,7 @@ const passport = require("passport");
 const bodyParser = require("body-parser");
 const users = require("./routes/users");
 require("./auth/google");
+require("./auth/passport");
 const auth = require("./routes/auth");
 
 // end module dependencies

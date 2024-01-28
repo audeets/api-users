@@ -1,14 +1,11 @@
 const express = require("express");
 const mongoose = require("../models/init");
+const { isUserAuthenticated } = require("../middlewares/auth");
 
 const User = mongoose.model("User");
 const router = express.Router();
 
-function isLoggedIn(req, res, next) {
-  req.user ? next() : res.sendStatus(401);
-}
-
-router.get("/current", isLoggedIn, (req, res, next) => {
+router.get("/current", isUserAuthenticated, (req, res, next) => {
   console.log(req.user);
   User.findOne({ _id: req.user.id })
     .then((result) => {

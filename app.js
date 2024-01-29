@@ -12,7 +12,7 @@ const passport = require("passport");
 const bodyParser = require("body-parser");
 const users = require("./routes/users");
 require("./auth/google");
-require("audeets-api-commons/auth/passport");
+require("@benoitquette/audeets-api-commons/auth/passport");
 const auth = require("./routes/auth");
 
 // end module dependencies

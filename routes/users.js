@@ -1,6 +1,8 @@
 const express = require("express");
-const mongoose = require("audeets-api-commons/models");
-const { isUserAuthenticated } = require("audeets-api-commons/middlewares/auth");
+const mongoose = require("@benoitquette/audeets-api-commons/models");
+const {
+  isUserAuthenticated,
+} = require("@benoitquette/audeets-api-commons/middlewares/auth");
 
 const User = mongoose.model("User");
 const router = express.Router();

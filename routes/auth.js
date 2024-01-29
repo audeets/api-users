@@ -1,6 +1,6 @@
 const express = require("express");
 const passport = require("passport");
-const mongoose = require("audeets-api-commons/models");
+const mongoose = require("@benoitquette/audeets-api-commons/models");
 
 const User = mongoose.model("User");
 const router = express.Router();

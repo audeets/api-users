@@ -1,5 +1,5 @@
 const passport = require("passport");
-const mongoose = require("audeets-api-commons/models");
+const mongoose = require("@benoitquette/audeets-api-commons/models");
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const User = mongoose.model("User");
 

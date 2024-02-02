@@ -13,6 +13,7 @@ passport.use(
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackURL: process.env.GOOGLE_CALLBACK_URL,
       passReqToCallback: true,
+      state: true,
     },
     function (request, accessToken, refreshToken, profile, cb) {
       User.findOne({ googleId: profile.id })

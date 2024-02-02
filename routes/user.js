@@ -10,16 +10,20 @@ const router = express.Router();
 router.get("/", isUserAuthenticated, (req, res, next) => {
   User.findOne({ _id: req.user.id })
     .then((result) => {
-      return res.json(result);
+      return res.status(200).json(result);
     })
     .catch((error) => {
       return next(error);
     });
 });
 
-router.get("/logout", isUserAuthenticated, (req) => {
-  req.logout();
-  req.session.destroy();
+router.get("/logout", (req, res, next) => {
+  req.logout((err) => {
+    if (err) {
+      return next(err);
+    }
+    return res.status(200).send("logged out");
+  });
 });
 
 module.exports = router;

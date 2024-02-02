@@ -10,10 +10,10 @@ const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const passport = require("passport");
 const bodyParser = require("body-parser");
-const users = require("./routes/users");
+const userRoute = require("./routes/user");
 require("./auth/google");
 require("@benoitquette/audeets-api-commons/auth/passport");
-const auth = require("./routes/auth");
+const authRoute = require("./routes/auth");
 
 // end module dependencies
 
@@ -48,7 +48,7 @@ app.use(passport.session());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use("/api/users", users);
-app.use("/api/auth", auth);
+app.use("/api/user", userRoute);
+app.use("/api/auth", authRoute);
 
 module.exports = app;

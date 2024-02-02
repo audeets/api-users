@@ -7,7 +7,7 @@ const {
 const User = mongoose.model("User");
 const router = express.Router();
 
-router.get("/current", isUserAuthenticated, (req, res, next) => {
+router.get("/", isUserAuthenticated, (req, res, next) => {
   User.findOne({ _id: req.user.id })
     .then((result) => {
       return res.json(result);
@@ -15,6 +15,11 @@ router.get("/current", isUserAuthenticated, (req, res, next) => {
     .catch((error) => {
       return next(error);
     });
+});
+
+router.get("/logout", isUserAuthenticated, (req) => {
+  req.logout();
+  req.session.destroy();
 });
 
 module.exports = router;

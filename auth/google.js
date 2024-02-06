@@ -18,6 +18,7 @@ passport.use(
           let user = result;
           if (!user) {
             user = new User();
+            user.projectsMax = process.env.PROJECT_MAX;
           }
           user.name = profile.displayName;
           user.googleId = profile.id;

@@ -1,16 +1,10 @@
-"use strict";
-
-/**
- * Module dependencies
- */
-
-const express = require("express");
-const cookieParser = require("cookie-parser");
+import express from "express";
+import cookieParser = require("cookie-parser");
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const passport = require("passport");
 const bodyParser = require("body-parser");
-const userRoute = require("./routes/user");
+
 require("./auth/google");
 require("@benoitquette/audeets-api-commons/auth/passport");
 const authRoute = require("./routes/auth");
@@ -51,4 +45,4 @@ app.use(cookieParser());
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 
-module.exports = app;
+export default app;

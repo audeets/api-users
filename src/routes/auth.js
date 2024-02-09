@@ -1,6 +1,6 @@
-const express = require("express");
-const passport = require("passport");
-const { checkReturnTo } = require("../middlewares/redirect");
+import express from "express";
+import passport from "passport";
+import { checkReturnTo } from "../middlewares/redirect.js";
 
 const router = express.Router();
 
@@ -19,4 +19,4 @@ router.get(
   })
 );
 
-module.exports = router;
+export default router;

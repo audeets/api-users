@@ -1,6 +1,6 @@
-var querystring = require("querystring");
+import querystring from "querystring";
 
-const checkReturnTo = (req, res, next) => {
+export const checkReturnTo = (req, res, next) => {
   var returnTo = req.query["returnTo"];
   if (returnTo) {
     req.session = req.session || {};
@@ -10,5 +10,3 @@ const checkReturnTo = (req, res, next) => {
   }
   next();
 };
-
-module.exports = { checkReturnTo };

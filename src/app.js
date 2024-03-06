@@ -1,5 +1,5 @@
 import express from "express";
-import cookieParser = require("cookie-parser");
+import cookieParser from "cookie-parser";
 const session = require("express-session");
 const MongoStore = require("connect-mongo");
 const passport = require("passport");
@@ -26,7 +26,8 @@ app.use(function (req, res, next) {
 app.use(
   session({
     secret: process.env.SESSION_SECRET,
-    resave: false,
+    resave: true,
+    rolling: true,
     saveUninitialized: true,
     cookie: {
       maxAge: 1000 * 60 * 30,

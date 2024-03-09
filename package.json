@@ -9,7 +9,7 @@
     "dev": "node --trace-deprecation --watch --env-file=.env ./src/index.js"
   },
   "dependencies": {
-    "@benoitquette/audeets-api-commons": "^1.0.25",
+    "@benoitquette/audeets-api-commons": "^1.0.26",
     "mongodb": "^6.4.0",
     "mongoose": "^8.2.1",
     "nodemailer": "^6.9.12",

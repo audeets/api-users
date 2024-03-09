@@ -1000,10 +1000,10 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@benoitquette/audeets-api-commons@^1.0.21":
-  version "1.0.21"
-  resolved "https://npm.pkg.github.com/download/@benoitquette/audeets-api-commons/1.0.21/80bae835e2088482d860483418d08bbf2034afff#80bae835e2088482d860483418d08bbf2034afff"
-  integrity sha512-xtTexA22egdMWKtNdotNCip12vWMLiFX/DqNgwg5n5h/5UugTxSa1ZY4GyTz3202TkkW1HT1Mt72JrOo8hLcVg==
+"@benoitquette/audeets-api-commons@^1.0.24":
+  version "1.0.24"
+  resolved "https://npm.pkg.github.com/download/@benoitquette/audeets-api-commons/1.0.24/45cf3b770d75c5d3a51f5396e484a0cee5c72238#45cf3b770d75c5d3a51f5396e484a0cee5c72238"
+  integrity sha512-u+tV7bzqee0AgGIuu5eJJeDzu54SSePekX21vwe5FweITYyZppNVAbzdOggJd8s+33AJ/ZzrfdRIKInx71oVbg==
   dependencies:
     body-parser "^1.20.2"
     connect-mongo "^5.1.0"
@@ -1350,7 +1350,7 @@ bn.js@^4.0.0:
   resolved "https://registry.yarnpkg.com/bn.js/-/bn.js-4.12.0.tgz#775b3f278efbb9718eec7361f483fb36fbbfea88"
   integrity sha512-c98Bf3tPniI+scsdk237ku1Dc3ujXQTSgyiPUDEOe7tRkhrqridvh8klBv0HCEso1OLOYcHuCv/cS6DNxKH+ZA==
 
-body-parser@1.20.2, body-parser@^1.20.2, body-parser@~1.20.2:
+body-parser@1.20.2, body-parser@^1.20.2:
   version "1.20.2"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.20.2.tgz#6feb0e21c4724d06de7ff38da36dad4f57a747fd"
   integrity sha512-ml9pReCu3M61kGlqoTm2umSXTlRTuGTx0bfYj+uIUKKYycG5NtSbeetV3faSU6R7ajOPw0g/J1PvK4qNy7s5bA==
@@ -1518,7 +1518,7 @@ convert-source-map@^2.0.0:
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-2.0.0.tgz#4b560f649fc4e918dd0ab75cf4961e8bc882d82a"
   integrity sha512-Kvp459HrV2FEJ1CAsi1Ku+MY3kasH19TFykTz2xWmMeq6bk2NU3XXvfJ+Q61m0xktWwt+1HSYf3JZsTms3aRJg==
 
-cookie-parser@^1.4.6, cookie-parser@~1.4.6:
+cookie-parser@^1.4.6:
   version "1.4.6"
   resolved "https://registry.yarnpkg.com/cookie-parser/-/cookie-parser-1.4.6.tgz#3ac3a7d35a7a03bbc7e365073a26074824214594"
   integrity sha512-z3IzaNjdwUC2olLIB5/ITd0/setiaFMLYiZJle7xg5Fe9KWAceil7xszYfHHBtDFYLSgJduS2Ty0P1uJdPDJeA==
@@ -1927,7 +1927,7 @@ express-session@^1.18.0:
     safe-buffer "5.2.1"
     uid-safe "~2.1.5"
 
-express@^4.18.3, express@~4.18.3:
+express@^4.18.3:
   version "4.18.3"
   resolved "https://registry.yarnpkg.com/express/-/express-4.18.3.tgz#6870746f3ff904dee1819b82e4b51509afffb0d4"
   integrity sha512-6VyCijWQ+9O7WuVMTRBTl+cjNNIzD5cY5mQ1WM8r/LEkI2u8EYpOotESNwzNlyCn3g+dmjKYI6BmNneSr/FSRw==

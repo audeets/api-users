@@ -1,13 +1,9 @@
 {
-	"compilerOptions": {
-		"target": "esnext",
-		"module": "esnext",
-		"baseUrl": "/"
-	},
-	"include": [
-		"**/*"
-	],
-	"exclude": [
-		"node_modules"
-	]
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "baseUrl": "/"
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules"]
 }

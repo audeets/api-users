@@ -1,17 +1,16 @@
 {
   "name": "audeets-api-users",
   "version": "1.0.0",
-  "private": false,
+  "private": true,
   "author": "Benoit Quette",
   "type": "module",
   "scripts": {
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0 --fix",
     "start": "node --env-file=.env ./src/index.js",
     "dev": "node --trace-deprecation --watch --env-file=.env ./src/index.js"
   },
   "dependencies": {
     "@benoitquette/audeets-api-commons": "^1.0.26",
-    "mongodb": "^6.4.0",
-    "mongoose": "^8.2.1",
     "nodemailer": "^6.9.12",
     "passport": "^0.7.0",
     "passport-google-oauth2": "^0.2.0"
@@ -25,7 +24,8 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-flowtype": "^8.0.3",
     "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-prettier": "^5.1.3"
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5"
   },
   "babel": {
     "presets": [

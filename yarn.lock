@@ -1000,10 +1000,10 @@
     "@babel/helper-validator-identifier" "^7.22.20"
     to-fast-properties "^2.0.0"
 
-"@benoitquette/audeets-api-commons@^1.0.26":
-  version "1.0.26"
-  resolved "https://npm.pkg.github.com/download/@benoitquette/audeets-api-commons/1.0.26/633dcbbdad381bdfe02f609b99cbcfe5f6c297f3#633dcbbdad381bdfe02f609b99cbcfe5f6c297f3"
-  integrity sha512-jnjcVeXK3wXGos5gqz8/5FuvW1QVnOLcI22PdXcUGyFXBA5YHaCrsWDjM39Kppn+8gbWenrQ8xf2epuy+nsx3A==
+"@benoitquette/audeets-api-commons@^1.0.28":
+  version "1.0.28"
+  resolved "https://npm.pkg.github.com/download/@benoitquette/audeets-api-commons/1.0.28/f0f04eecbf54f61b5413a5aa7c10705aabe69f03#f0f04eecbf54f61b5413a5aa7c10705aabe69f03"
+  integrity sha512-wPjjcYnvTmxLk+8xfGVk7BcbdeZV/KoMzQxIurvKmyweaZ3ZXI8QnwcgEkQ+635luHv3o1Hw9Us1Az2QJ1mgkQ==
   dependencies:
     body-parser "^1.20.2"
     connect-mongo "^5.1.0"

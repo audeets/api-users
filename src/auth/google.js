@@ -1,5 +1,5 @@
 import passport from 'passport';
-import mongoose from '@benoitquette/audeets-api-commons/models/index.js';
+import mongoose from '@audeets/api-commons/models/index.js';
 import { Strategy } from 'passport-google-oauth2';
 import nodemailer from 'nodemailer';
 

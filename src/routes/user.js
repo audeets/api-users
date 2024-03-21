@@ -1,6 +1,6 @@
 import express from 'express';
-import mongoose from '@benoitquette/audeets-api-commons/models/index.js';
-import { isUserAuthenticated } from '@benoitquette/audeets-api-commons/middlewares/auth.js';
+import mongoose from '@audeets/api-commons/models/index.js';
+import { isUserAuthenticated } from '@audeets/api-commons/middlewares/auth.js';
 
 const User = mongoose.model('User');
 const router = express.Router();

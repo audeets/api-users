@@ -1,5 +1,5 @@
-import app from '@benoitquette/audeets-api-commons/app.js';
-import server from '@benoitquette/audeets-api-commons/server.js';
+import app from '@audeets/api-commons/app.js';
+import server from '@audeets/api-commons/server.js';
 import google from './auth/google.js';
 import userRouter from './routes/user.js';
 import authRoute from './routes/auth.js';
